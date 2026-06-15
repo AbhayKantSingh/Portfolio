@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Your Name — B.Tech Mathematics & Computing student learning Web Development, Python, DSA and AI/ML."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="dark">
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo">
+          <span class="bracket">&lt;</span>ABHAY<span class="bracket"
+            >/&gt;</span
+          ><span class="dot">.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark / light theme"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <canvas id="hero-canvas"></canvas>
+
+      <div class="container">
+        <div class="hero-text">
+          <p class="eyebrow">B.Tech Mathematics &amp; Computing — 2nd Year</p>
+          <h1>Hi, I'm <span class="text-gradient">ABHAY SINGH</span>.</h1>
+
+          <p class="role-line">
+            <span class="prefix">&gt;</span>
+            <span id="typingText"></span><span class="cursor-blink"></span>
+          </p>
+
+          <p class="lead">
+            I'm currently building my foundations in web development, Python,
+            data structures &amp; algorithms, and machine learning — one project
+            and one problem at a time. No long list of achievements yet, but
+            plenty in progress.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+
+          <div class="social-row">
+            <a
+              href="https://github.com/AbhayKantSingh"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abhay-singh-50b423381/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://leetcode.com/u/ABHAY_SINGH_07/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LeetCode"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.48 2.05a1.5 1.5 0 0 1 .12 2.12L8.9 9.7l3.97 4.18a1.5 1.5 0 0 1-2.18 2.06l-5-5.27a1.5 1.5 0 0 1 0-2.07l5.7-6.43a1.5 1.5 0 0 1 2.09-.12zM7.5 14.5a1.5 1.5 0 0 1 1.5 1.5v.5a3.5 3.5 0 0 0 3.5 3.5h4a3.5 3.5 0 0 0 3.5-3.5v-1a1.5 1.5 0 0 1 3 0v1a6.5 6.5 0 0 1-6.5 6.5h-4A6.5 6.5 0 0 1 6 16.5V16a1.5 1.5 0 0 1 1.5-1.5zM18 5a1.5 1.5 0 0 1 1.5 1.5V7A1.5 1.5 0 0 1 18 8.5h-6A1.5 1.5 0 0 1 10.5 7v-.5A1.5 1.5 0 0 1 12 5h6z"
+                />
+              </svg>
+            </a>
+            <a href="mailto:abhaykant1122singh@gmail.com" aria-label="Email">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <path d="M22 6l-10 7L2 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-frame">
+            <img src="assets/image.png" alt="image" />
+          </div>
+
+          <div class="floating-tag tag-1">
+            <span class="dot-ind"></span> Python
+          </div>
+          <div class="floating-tag tag-2">
+            <span class="dot-ind"></span> JavaScript
+          </div>
+          <div class="floating-tag tag-3">
+            <span class="dot-ind"></span> DSA
+          </div>
+          <div class="floating-tag tag-4">
+            <span class="dot-ind"></span> ML basics
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <span class="line"></span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-text reveal">
+          <p class="eyebrow">About Me</p>
+          <h2 class="section-heading">
+            Still early in the journey —<br />and enjoying every part of it.
+          </h2>
+
+          <p>
+            I'm a
+            <strong
+              >2nd-year B.Tech student in Mathematics &amp; Computing</strong
+            >, which means my days are split between proofs, problem sets, and
+            code editors. I got into web development first, building small pages
+            and layouts, and that curiosity pulled me toward
+            <strong>Python</strong>, where I'm now working through
+            <strong>data structures &amp; algorithms</strong> to think more
+            clearly about problems.
+          </p>
+
+          <p>
+            Lately I've also started exploring
+            <strong>AI &amp; machine learning</strong> — partly because of the
+            math background, and partly because I just want to understand how
+            the things I use every day actually work. I don't have a long list
+            of achievements or shipped products yet, but I show up, write code,
+            and keep a running list of things I want to build next.
+          </p>
+
+          <div class="about-meta">
+            <span class="meta-chip">Open to learning opportunities</span>
+            <span class="meta-chip">Math &amp; Computing</span>
+            <span class="meta-chip">Building in public</span>
+          </div>
+        </div>
+
+        <div class="stats-grid reveal-stagger reveal">
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-count="2">0</span><span>nd</span>
+            </div>
+            <div class="stat-label">Year of B.Tech — Math &amp; Computing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><span data-count="4">0</span></div>
+            <div class="stat-label">Core areas I'm learning right now</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-count="2" data-suffix="+">0</span>
+            </div>
+            <div class="stat-label">
+              DSA problems solved so far (and counting)
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Curiosity about how things work</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills &amp; Toolbox</p>
+          <h2 class="section-heading">What I'm learning &amp; using.</h2>
+          <p class="section-sub">
+            These bars reflect how comfortable I currently feel — not mastery.
+            Everything here is a work in progress, and that's exactly the point.
+          </p>
+        </div>
+
+        <div class="skills-tabs reveal">
+          <button class="skill-tab active" data-target="panel-web">
+            Web Development
+          </button>
+          <button class="skill-tab" data-target="panel-python">
+            Python &amp; DSA
+          </button>
+          <button class="skill-tab" data-target="panel-aiml">AI / ML</button>
+          <button class="skill-tab" data-target="panel-math">
+            Math &amp; Tools
+          </button>
+        </div>
+
+        <div class="skills-panels reveal">
+          <!-- Web Development Panel -->
+          <div class="skills-panel active" id="panel-web">
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>HTML &amp; CSS</span><span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>JavaScript (ES6+)</span><span>60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="60"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Responsive Design</span><span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Git &amp; GitHub</span><span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="55"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>React (basics)</span><span>30%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="30"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>UI / Layout Design</span><span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="50"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Python & DSA Panel -->
+          <div class="skills-panel" id="panel-python">
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Python Fundamentals</span><span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Data Structures</span><span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="55"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Algorithms</span><span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="50"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Problem Solving (LeetCode / GFG)</span><span>45%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="45"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>OOP Concepts</span><span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="55"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Time &amp; Space Complexity</span><span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="40"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI / ML Panel -->
+          <div class="skills-panel" id="panel-aiml">
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>NumPy &amp; Pandas</span><span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="40"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Machine Learning Basics</span><span>30%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="30"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Scikit-learn</span><span>25%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="25"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Data Visualization</span><span>35%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="35"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Neural Networks (intro)</span><span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="20"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Model Evaluation</span><span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="20"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Math & Tools Panel -->
+          <div class="skills-panel" id="panel-math">
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Linear Algebra</span><span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>Calculus</span><span>65%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Probability &amp; Statistics</span><span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="55"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top"><span>VS Code</span><span>80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Linux Basics</span><span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="40"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <span>Jupyter Notebook</span><span>45%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-level="45"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="journey" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">My Journey</p>
+          <h2 class="section-heading">From "Hello, World" to here.</h2>
+          <p class="section-sub">
+            A quick timeline of how I got here — and where I'm headed next.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <span class="timeline-date">Year 1</span>
+            <h4>Started B.Tech in Mathematics &amp; Computing</h4>
+            <p>
+              Built a foundation in mathematics, logical reasoning, and core
+              programming concepts — and got hooked on the idea of turning ideas
+              into working software.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">Year 1 → 2</span>
+            <h4>Picked up Web Development</h4>
+            <p>
+              Started with HTML, CSS and JavaScript — building small pages,
+              layouts, and UI experiments to understand how the web actually
+              works under the hood.
+            </p>
+          </div>
+
+          <div class="timeline-item is-now">
+            <span class="timeline-date">
+              Right Now <span class="badge-now">In Progress</span>
+            </span>
+            <h4>Going deep on Python, DSA &amp; AI/ML</h4>
+            <p>
+              Currently splitting focused time between data structures &amp;
+              algorithms (for stronger problem-solving), and the fundamentals of
+              machine learning — connecting the math I'm studying with real,
+              working code.
+            </p>
+          </div>
+
+          <div class="timeline-item is-next">
+            <span class="timeline-date">Next Up</span>
+            <h4>Real projects, open source &amp; internships</h4>
+            <p>
+              The plan: turn this learning into a portfolio of real projects,
+              contribute to open-source repositories, and land my first
+              internship. This section will fill up soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section-heading">What I'm building.</h2>
+          <p class="section-sub">
+            I'm actively working on my first projects — this section is where
+            they'll live once they're ready. Here's a preview of what's coming.
+          </p>
+        </div>
+
+        <div class="projects-grid reveal-stagger reveal">
+          <!-- Project 1: Portfolio -->
+          <a href="#">
+            <div class="project-card">
+              <span class="project-status status-completed">completed</span>
+              <div class="proj-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Personal Portfolio Site</h3>
+              <p>
+                This very website — built from scratch with HTML, CSS &amp;
+                vanilla JavaScript while learning front-end fundamentals.
+              </p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 2: DSA Visualizer -->
+          <a href="#">
+            <div class="project-card">
+              <span class="project-status status-progress">In Progress</span>
+              <div class="proj-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <h3>DSA Visualizer</h3>
+              <p>
+                A Python &amp; JavaScript tool to visualize how common data
+                structures and algorithms work, step by step.
+              </p>
+              <div class="tech-tags">
+                <span>Python</span><span>JavaScript</span><span>DSA</span>
+              </div>
+              <a href="#" class="btn btn-ghost" aria-disabled="true">
+                Coming soon
+              </a>
+            </div>
+          </a>
+
+          <!-- Project 3: ML Mini-Project -->
+          <a href="#">
+            <div class="project-card">
+              <span class="project-status status-planned">📋 Planned</span>
+              <div class="proj-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2a10 10 0 1 0 10 10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <h3>ML Prediction Mini-Project</h3>
+              <p>
+                A small machine learning project applying regression /
+                classification basics to a real dataset using scikit-learn.
+              </p>
+              <div class="tech-tags">
+                <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
+              </div>
+              <a href="#" class="btn btn-ghost" aria-disabled="true">Planned</a>
+            </div>
+          </a>
+        </div>
+
+        <p class="projects-footnote">
+          // more projects are committed locally and on the way
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get in Touch</p>
+          <h2 class="section-heading">Let's connect.</h2>
+          <p>
+            Whether it's about a project idea, study group, internship
+            opportunity, or just talking about code, math, or DSA problems —
+            feel free to reach out. I'd love to hear from you.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:abhaykant1122singh@gmail.com">
+              <span class="icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <path d="M22 6l-10 7L2 6" />
+                </svg>
+              </span>
+              abhaykant1122singh@gmail.com
+            </a>
+            <a
+              href="https://github.com/AbhayKantSingh"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </span>
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abhay-singh-50b423381/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+                  />
+                </svg>
+              </span>
+              LinkedIn
+            </a>
+            <a
+              href="https://leetcode.com/u/ABHAY_SINGH_07/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.48 2.05a1.5 1.5 0 0 1 .12 2.12L8.9 9.7l3.97 4.18a1.5 1.5 0 0 1-2.18 2.06l-5-5.27a1.5 1.5 0 0 1 0-2.07l5.7-6.43a1.5 1.5 0 0 1 2.09-.12zM7.5 14.5a1.5 1.5 0 0 1 1.5 1.5v.5a3.5 3.5 0 0 0 3.5 3.5h4a3.5 3.5 0 0 0 3.5-3.5v-1a1.5 1.5 0 0 1 3 0v1a6.5 6.5 0 0 1-6.5 6.5h-4A6.5 6.5 0 0 1 6 16.5V16a1.5 1.5 0 0 1 1.5-1.5zM18 5a1.5 1.5 0 0 1 1.5 1.5V7A1.5 1.5 0 0 1 18 8.5h-6A1.5 1.5 0 0 1 10.5 7v-.5A1.5 1.5 0 0 1 12 5h6z"
+                  />
+                </svg>
+              </span>
+              LeetCode
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+            />
+            <div class="form-error" id="nameError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+            <div class="form-error" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="What would you like to talk about?"
+            ></textarea>
+            <div class="form-error" id="messageError"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">
+            This opens your email app with a pre-filled message. Replace the
+            address in script.js with your own email, or connect a form service
+            later.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="container footer-inner">
+        <span>
+          © <span id="year"></span> Your Name. Built with HTML, CSS &amp;
+          JavaScript.
+        </span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="12" y1="19" x2="12" y2="5" />
+        <polyline points="5 12 12 5 19 12" />
+      </svg>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
